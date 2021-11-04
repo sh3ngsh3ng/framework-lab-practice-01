@@ -23,13 +23,16 @@ app.use(
   })
 );
 
+
 // import routes
 const landingRoutes = require('./routes/landing')
 const posterRoutes = require("./routes/posters")
+const productsRoutes = require('./routes/products')
 
 async function main() {
     app.use("/", landingRoutes)
     app.use("/posters", posterRoutes)
+    app.use('/products', productsRoutes)
 }
 
 main();
